@@ -21,7 +21,7 @@ To run this project locally, ensure you have the following installed:
    ```
 2. Open the project folder in VS Code:
    ```sh
-   cd ecommerce-site
+   cd ecommerce-website
    ```
 3. Open the `index.html` file in VS Code.
 4. Right-click anywhere in the editor and select **Open with Live Server** (or use the shortcut `Alt + L, Alt + O`).
