@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Store</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="https://kit.fontawesome.com/36d9f2c109.js" crossorigin="anonymous"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/cartPageUtils.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html"><img src="../imgs/Logo.png"></a>
+        <div class="container">
+            <div class="container-items">
+                <a href="category.html" class="container-item nav-item">Everything</a>
+                <a href="category.html?slug=women" class="container-item nav-item">Women</a>
+                <a href="category.html?slug=men" class="container-item nav-item">Men</a>
+                <a href="category.html?slug=accessories" class="container-item nav-item">Accessories</a>
+            </div>
+        </div>
+        <div class="container right">
+            <div>
+                <a href="about.html" class="right-item nav-item">About</a>
+                <a href="contact.html" class="right-item mr-40 nav-item">Contact Us</a>
+                <button class="cart"><span class="mr-10 cart-total-price" data-cart-total>£0.00</span>
+                    <div class="cart-icon">
+                        <div class="cart-indicator">
+                            <div class="cart-number">0</div>
+                        </div>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </button>
+                <a href="#" class="cart"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+        <div class="mobile-menu mobile-only right">
+            <button class="cart right mobile-only"><span class="mr-10 cart-total-price" data-cart-total>£0.00</span>
+                <div class="cart-icon">
+                    <div class="cart-indicator">
+                        <div class="cart-number">0</div>
+                    </div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </button>
+            <button class="right bars">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-sidebar">
+        <button class="mobile-sidebar-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="mobile-item-container">
+            <div class="mobile-item">
+                <a href="#" class="user"><i class="fa-solid fa-user"></i></a>
+            </div>
+            <div class="mobile-item">
+                <a href="category.html" class="mobile-link">Everything</a>
+                <a href="category.html?slug=women" class="mobile-link">Women</a>
+                <a href="category.html?slug=men" class="mobile-link">Men</a>
+                <a href="category.html?slug=accessories" class="mobile-link">Accessories</a>
+            </div>
+            <div class="mobile-item">
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="contact.html" class="mobile-link">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <h1 class="text-xl text-gray my-40">Cart</h1>
+
+        <div class="cart-alert-message">
+            <p class="cart-alert">
+                <span id="cart-alert-icon"></span>
+                <span class="ml-10 text-gray" id="cart-alert-message">Please enter a coupon</span>
+            </p>
+            
+        </div>
+        <table class="cart-table">
+            <tr>
+                <th> </th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+            </tr>
+            <tbody class="cart-table-body">
+        </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="5">
+                            <div class="cart-table-footer">
+                                    <form id="coupon-form">
+                                        <input type="text" id="coupon-input" placeholder="Coupon Code" class="input-box" />
+                                        <button class="button-long mt-0" type="submit">Apply</button>
+                                    </form>    
+                                    
+                                    <button class="button-long mt-0 w-20 mr-40 hidden" id="remove-coupon">Remove Coupon</button>                
+                                <button class="button-long mt-0 w-20 mr-40">Update Cart</button>
+                        </div>
+
+                        </td>
+                    </tr>
+                    
+                </tfoot>
+    
+          </table>
+          <p class="available-coupons">10OFF • 50OFF</p>
+
+          <div class="checkout-container mt-45">
+                <div class="checkout-box right">
+                    <div class="checkout-header">
+                        <h1>Cart Totals</h1>
+                    </div>
+                    <div class="checkout-body mx-auto">
+                        <table class="mt-30">
+                            <tbody>
+                                <tr>
+                                    <th>Subtotal</th>
+                                    <td id="cart-subtotal" data-cart-total>
+                                        £900
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Discount</th>
+                                    <td id="cart-discount">£0.00</td>
+                                </tr>
+                                <tr>
+                                    <th>Total</th>
+                                    <td id="cart-total">£900</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="button-long mt-20 mb-10 w-full">Checkout</button>
+                    </div>
+                </div>
+          </div>
+          <footer>
+            <div class="footer-text-content">
+                <h1>SAVE UP TO 50% ON ALL SELECTED PRODUCTS</h1>
+            </div>
+            <div class="divider-long"></div>
+            <div class="footer-text-content">
+                <div class="footer-grid">
+                    <div>
+                        <img src="../imgs/Logo.png"/>
+                        <p>The best look anytime, anywhere.</p>
+                    </div>
+                    <div>
+                        <h2>For Him</h2>
+                        <ul>
+                            <li><a href="#">Mens Jeans</a></li>
+                            <li><a href="#">Mens Jackets</a></li>
+                            <li><a href="#">Mens Shirts</a></li>
+                            <li><a href="#">Mens T-Shirts</a></li>
+                            <li><a href="#">Mens Shoes</a></li>
+                            <li><a href="#">Mens Watches</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>For Her</h2>
+                        <ul>
+                            <li><a href="#">Women Jeans</a></li>
+                            <li><a href="#">Tops & T-Shirts</a></li>
+                            <li><a href="#">Women Jackets</a></li>
+                            <li><a href="#">Heels & Flats</a></li>
+                            <li><a href="#">Women Accessories</a></li>
+                            <li><a href="#">Women Watches</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Legal</h2>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Cookies Policy</a></li>
+                            <li><a href="#">Cancellations & Returns</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="divider-long"></div>
+            <div class="footer-text-content">
+                <div class="footer-bottom">
+                    <p>Copyright &copy; 2025 Store | Initial Design by <a href="https://websitedemos.net/brandstore-02/">Brandstore-02</a> | Developed by <a href="https://zakt.dev">Zak</a></p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>                      
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div> 
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

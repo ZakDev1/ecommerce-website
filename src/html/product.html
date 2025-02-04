@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Store</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <script src="https://kit.fontawesome.com/36d9f2c109.js" crossorigin="anonymous"></script>
+    <script src="../js/cart.js"></script>
+    <script type="module" src="../js/productSlug.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html"><img src="../imgs/Logo.png"></a>
+        <div class="container">
+            <div class="container-items">
+                <a href="category.html" class="container-item nav-item">Everything</a>
+                <a href="category.html?slug=women" class="container-item nav-item">Women</a>
+                <a href="category.html?slug=men" class="container-item nav-item">Men</a>
+                <a href="category.html?slug=accessories" class="container-item nav-item">Accessories</a>
+            </div>
+        </div>
+        <div class="container right">
+            <div>
+                <a href="about.html" class="right-item nav-item">About</a>
+                <a href="contact.html" class="right-item mr-40 nav-item">Contact Us</a>
+                <button class="cart"><span class="mr-10 cart-total-price" data-cart-total>£0.00</span>
+                    <div class="cart-icon">
+                        <div class="cart-indicator">
+                            <div class="cart-number">0</div>
+                        </div>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </button>
+                <a href="#" class="cart"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+        <div class="mobile-menu mobile-only right">
+            <button class="cart right mobile-only"><span class="mr-10 cart-total-price" data-cart-total>£0.00</span>
+                <div class="cart-icon">
+                    <div class="cart-indicator">
+                        <div class="cart-number">0</div>
+                    </div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </button>
+            <button class="right bars">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-sidebar">
+        <button class="mobile-sidebar-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="mobile-item-container">
+            <div class="mobile-item">
+                <a href="#" class="user"><i class="fa-solid fa-user"></i></a>
+            </div>
+            <div class="mobile-item">
+                <a href="category.html" class="mobile-link">Everything</a>
+                <a href="category.html?slug=women" class="mobile-link">Women</a>
+                <a href="category.html?slug=men" class="mobile-link">Men</a>
+                <a href="category.html?slug=accessories" class="mobile-link">Accessories</a>
+            </div>
+            <div class="mobile-item">
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="contact.html" class="mobile-link">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <p>Shopping Cart</p>
+            <button class="cart-sidebar-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="divider-long"></div>
+
+        <div class="cart-item-container">
+        </div>
+
+        <div class="divider-long"></div>
+        <div class="cart-sidebar-subtotal-container">
+            <p>Subtotal:</p>
+            <p class="cart-sidebar-subtotal" data-cart-total>
+                £0
+            </p>
+        </div>
+        <div class="divider-long"></div>
+        <div class="cart-sidebar-buttons">
+            <button class="button-long" onclick="window.location.href = 'cart.html'">View Cart</button>
+            <button class="button-long">Checkout</button>
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <div class="product-container mt-45">
+            <img src="" class="product-image"/>
+            <div class="product-information">
+                <p class="product-breadcrumb">Home/Mens/Testing Product</p>
+                <h1 class="product-title"></h1>
+                <p class="product-price"></p>
+                <p class="product-description"></p>
+                <div class="divider-long"></div>
+                <p class="product-price"></p>
+                <div class="product-add-cart">
+                    <input type="number" min="0" max="99" value="1" class="input-box mr-10"/>
+                    <button class="button-long w-40 ">Add to cart</button>
+                </div>
+                <div class="divider-long mt-10 full-only"></div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-text-content mt-45">
+                <h1>SAVE UP TO 50% ON ALL SELECTED PRODUCTS</h1>
+            </div>
+            <div class="divider-long"></div>
+            <div class="footer-text-content">
+                <div class="footer-grid">
+                    <div>
+                        <img src="../imgs/Logo.png"/>
+                        <p>The best look anytime, anywhere.</p>
+                    </div>
+                    <div>
+                        <h2>For Him</h2>
+                        <ul>
+                            <li><a href="#">Mens Jeans</a></li>
+                            <li><a href="#">Mens Jackets</a></li>
+                            <li><a href="#">Mens Shirts</a></li>
+                            <li><a href="#">Mens T-Shirts</a></li>
+                            <li><a href="#">Mens Shoes</a></li>
+                            <li><a href="#">Mens Watches</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>For Her</h2>
+                        <ul>
+                            <li><a href="#">Women Jeans</a></li>
+                            <li><a href="#">Tops & T-Shirts</a></li>
+                            <li><a href="#">Women Jackets</a></li>
+                            <li><a href="#">Heels & Flats</a></li>
+                            <li><a href="#">Women Accessories</a></li>
+                            <li><a href="#">Women Watches</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Legal</h2>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Cookies Policy</a></li>
+                            <li><a href="#">Cancellations & Returns</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="divider-long"></div>
+            <div class="footer-text-content">
+                <div class="footer-bottom">
+                    <p>Copyright &copy; 2025 Store | Initial Design by <a href="https://websitedemos.net/brandstore-02/">Brandstore-02</a> | Developed by <a href="https://zakt.dev">Zak</a></p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>                      
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div> 
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
