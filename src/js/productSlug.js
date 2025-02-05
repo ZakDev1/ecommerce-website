@@ -1,29 +1,32 @@
-import { products } from './temp.js'
+import { products } from './temp.js';
 
 function getSlugFromURL() {
-    // Get the slug from the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('slug');
+    return new URLSearchParams(window.location.search).get('slug');
 }
 
 function updateProductContent() {
     const slug = getSlugFromURL();
-
-    // Find the products that matches the slug
     const product = products.find(p => p.id === slug);
 
-    // If theres a product then update the content, if no product return to the home page
-    if (product) {
-        document.querySelector(".product-title").innerText = product.title;
-        document.querySelector(".product-description").innerText = product.description;
-        document.querySelector(".product-image").src = `../imgs/${product.image}`;
-        document.querySelectorAll(".product-price").forEach(element => {
-            element.innerText = "£" + product.price
-        })
-    } else {
+    if (!product) {
         window.location.href = "/src/html/";
+        return;
+    }
+
+    const setTextContent = (selector, value) => {
+        const element = document.querySelector(selector);
+        if (element) element.textContent = value;
+    };
+
+    setTextContent(".product-title", product.title);
+    setTextContent(".product-description", product.description);
+    document.querySelectorAll(".product-price").forEach(el => el.textContent = `£${product.price}`);
+
+    const productImage = document.querySelector(".product-image");
+    if (productImage) {
+        productImage.src = `../imgs/${product.image}`;
+        productImage.alt = product.title || "Product Image";
     }
 }
 
-// Setup the listener when the page loads
 document.addEventListener("DOMContentLoaded", updateProductContent);
